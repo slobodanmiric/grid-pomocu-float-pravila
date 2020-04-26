@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Clear svojstvo</title>
+    <style>
+        img {
+            width: 400px;
+            height: auto;
+        }
+        section img:nth-child(1) {
+            float: left;
+        }
+        section img:nth-child(2) {
+            float: right;
+        }
+        section::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>    
+</head>
+<body>
+    <section>
+        <img src="css-kod.jpg">
+        <img src="patern-ponavljanje.jpg">
+    </section>
+<!--<div class="clearfix"></div>  -->
+    <p>Koristimo 2 klase prvom definisemo zajednicke osobine, a sa drugom specificnosti svake slike ili bilo koje drugog elementa.</p>
+</body>
+</html>

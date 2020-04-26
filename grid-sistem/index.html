@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid sistem</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        /* sa ovim pravilom zelimo da uracunamo padding i margine u sirinu elementa */
+        .meta {
+            background: white;
+            font-size: 20px;
+            padding: 30px;
+        }
+        .meta span {
+            color: red;
+            font-weight: bold;
+        }
+        body {
+            background-image: radial-gradient(blue, tomato, navy);
+            background-repeat: no-repeat;
+            font-family: sans-serif;
+            padding: 100px;
+            height: 100vh;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+            font-size: 4em;
+            text-shadow: 0px 0px 5px black;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            background: rgba(255, 255, 255, .5);
+        }
+
+        .row::after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+
+        .col-1 {width: 8.33%;}   /* 12*8.33 = 100 */
+        .col-2 {width: 16.66%;}  /* 6*16.66 = 100 */
+        .col-3 {width: 25%;}     /* 4*25 = 100 */
+        .col-4 {width: 33.33%;}  /* 3*33.33 = 100 */
+        .col-5 {width: 41.66%;}  /* 12*8.33 = 100 */
+        .col-6 {width: 50%;}
+        .col-7 {width: 58.33%;}
+        .col-8 {width: 66.66%;}
+        .col-9 {width: 75%;}
+        .col-10 {width: 83.33%;}
+        .col-11 {width: 91.66%;}
+        .col-12 {width: 100%;}
+
+        [class*="col-"] {
+            border: 2px solid black;
+            padding: 15px;
+            float: left;
+        }
+        @media(max-width: 768px) {
+          /* za mobilne i tablete telefone sve kolone su sirine 100% */
+            [class*="col-"] {
+               width: 100%;
+            }
+            .container {
+                width: 90%;
+            }
+            body {
+                padding: 20px;
+            }
+        }
+        /* Extra mali uredjaji (telefoni, 600px i manji) */
+        @media only screen and (max-width: 600px) {
+            body {background: darkcyan;}
+        }
+        /* Mali uredjaji (portret tableti i veliki telefoni, 600px and up) */
+        @media(min-width: 600px) {
+          body  {background: orangered;}
+        }
+
+        /* Srednjui uredjaji (landscape tablei, 768px pa na vise) */
+        @media(min-width: 768px) {
+          body  {background: violet;}
+        } 
+
+        /* Veliki uredjaji (laptops/desktops, 992px and up) */
+        @media(min-width: 992px) {
+          body  {background: green;}
+        } 
+
+        /* Extra large devices (large laptops and desktops, 1200px and up) */
+        @media(min-width: 1200px) {
+          body {background-image: radial-gradient(blue, tomato, navy);}
+        }
+    </style>
+</head>
+
+<body>
+<!--
+    <div class="meta container">
+        <h2>Meta - Viewport</h2>
+        <hr>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h3><span>Ova linija koda podrazumeva da će čitači za mobilne uredjaje zadati širinu prozora tako da bude jednaka širini udeđaja</span></h3>
+        <hr>
+        <p> Upotrebom grida se postiže konzistentnost u dizajnu i stvara  dobar estetski efekat u očima korisnika. Iako mreža nameće ograničenja, ipak je moguće  kreirati veoma unikatan dizajn. </p>
+        <p>Grid sistem je struktura koja se sastoji od serije horizontalnih i vertikalnih linija  koje se  međusobno  presecaju i  formiraju  ćelije u koje je  moguće  postaviti  sadržaj.
+Vidljivost  mreže  se  isključuje  po  okončanju  procesa  izrade  web  stranice.</p>
+    </div>
+-->
+   
+    <h1>Grid sistem</h1>
+    <!-- container, row, kolona -->
+    <div class="container">
+        <div class="row">
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+            <div class="col-1">col-1</div>
+        </div>
+        <div class="row">
+            <div class="col-3">col-3</div>
+            <div class="col-3">col-3</div>
+            <div class="col-3">col-3</div>
+            <div class="col-3">col-3</div>
+        </div>
+        <div class="row">
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+            <div class="col-4">col-4</div>
+        </div>
+        <div class="row">
+            <div class="col-6">col-6</div>
+            <div class="col-6">col-6</div>
+        </div>
+        <div class="row">
+            <div class="col-7">col-7</div>
+            <div class="col-5">col-5</div>
+        </div>
+        <div class="row">
+            <div class="col-8">col-8</div>
+            <div class="col-4">col-4</div>
+        </div>
+        <div class="row">
+            <div class="col-9">col-9</div>
+            <div class="col-3">col-3</div>
+        </div>
+        <div class="row">
+            <div class="col-10">col-10</div>
+            <div class="col-2">col-2</div>
+        </div>
+        <div class="row">
+            <div class="col-11">col-11</div>
+            <div class="col-1">col-1</div>
+        </div>
+    </div>
+</body>
+</html>

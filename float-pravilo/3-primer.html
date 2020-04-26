@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Primer float</title>
+    <style>
+        * {
+            box-sizing: border-box;
+/*            margin: 0;*/
+        }
+
+        header {
+            background: orangered;
+            color: white;
+            padding: 30px;
+            text-align: center
+        }
+
+        .levi,
+        .desni {
+            width: 20%;
+            height: 80vh;
+            background: lightgray;
+            padding: 30px;
+            text-align: center;
+            float: left;
+        }
+
+        .sadrzaj {
+            width: 60%;
+            height: 80vh;
+            background: navy;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            float: left;
+        }
+
+        footer {
+            background: orangered;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .clearfix {
+            clear: both;
+        }
+/*
+        main::after {
+            content: "";
+            display: block;
+            clear: both;
+        }
+*/
+    </style>
+</head>
+
+<body>
+    <header>
+        Header - zaglavlje
+    </header>
+<!--    <main>-->
+        <aside class="levi">
+        Levi sidebar
+        </aside>
+        <section class="sadrzaj">
+            Glavni sadrzaj
+        </section>
+        <aside class="desni">
+            Desni sidebar
+        </aside>
+<!--    </main>-->
+    <div class="clearfix"></div>
+    <footer>
+        Footer - podnozje
+    </footer>
+</body>
+</html>
